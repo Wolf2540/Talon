@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monitor Control Panel</title>
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts/index_script.js') }}"></script>
+    </head>
+
+
+    <body>
+        <h1>Control Panel</h1>
+        <input type="text" id="commandInput" placeholder="Enter command..." />
+        <button onclick="sendCommand()">Send</button>
+
+        <p id="responseMessage" style="color: green; font-weight: bold;"></p>
+
+        <div class="latest">
+            <div class="screenshot_section">
+                <h2>Latest Screenshot</h2>
+                <a href="/screenshots">All Screenshots</a>
+            </div>
+            <a id="latest-link" href="" target="_blank">
+                <img id="latest-img" src="" alt="Latest Screenshot">
+            </a>
+        </div>
+
+
+    </body>
+
+    <style>
+        img {
+            width: 50%;
+        }
+    </style>
+</html>
